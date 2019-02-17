@@ -1,0 +1,35 @@
+<div>
+  <p><b>Propery & Event Binding</b></p>
+  button enables after 2 secs
+  <button 
+    class="btn btn-primary" 
+    [disabled]="isButtonDisabled"
+    (click) = "changeStatus()" >go on!</button>
+  <p>Status of the button is now: <span [innerText]="!isButtonDisabled"></span></p>
+  <p>This will change on button click: {{ testStatus }}</p>
+  <b>One way binding:</b>
+  <input type="text" class="form-control" (input)="onUpdateInput($event)"/>
+</div>
+<hr />
+<div>
+  <b>Two Way Binding:</b>
+  <input type="text" class="form-control" [(ngModel)]="testName" />
+</div>
+<hr />
+<p *ngIf="testName; else noTestName">Test name (result from input bindings): {{ testName }}</p>
+<ng-template #noTestName>
+  <p>Right now "testName" property is empty. This is ngIf else template. Type in input field to see this change</p>
+</ng-template>
+<hr />
+
+<div class="more">
+  <p><b>Using selectors</b></p>
+  <div app-test-attribute-selector></div>
+  <div class="app-test-class-selector"></div>
+</div>
+
+<hr />
+
+<app-test></app-test>
+<app-test></app-test>
+<app-test></app-test>
