@@ -8,7 +8,7 @@ import { TestComponent } from './test/test.component';
 import { TestsComponent } from './tests/tests.component';
 import { TestAttributeSelectorComponent } from './test-attribute-selector/test-attribute-selector.component';
 import { TestClassSelectorComponent } from './test-class-selector/test-class-selector.component';
-import { TestStyleComponent } from './test-style/test-style.component'
+import { TestKeysComponent } from './test-keys/test-keys.component'
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import { TestStyleComponent } from './test-style/test-style.component'
     TestsComponent,
     TestAttributeSelectorComponent,
     TestClassSelectorComponent,
-    TestStyleComponent
+    TestKeysComponent
   ],
   imports: [
     BrowserModule,

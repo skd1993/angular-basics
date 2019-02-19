@@ -10,12 +10,16 @@
   <b>One way binding:</b>
   <input type="text" class="form-control" (input)="onUpdateInput($event)"/>
 </div>
+
 <hr />
+
 <div>
   <b>Two Way Binding:</b>
   <input type="text" class="form-control" [(ngModel)]="testName" />
 </div>
+
 <hr />
+
 <p *ngIf="testName; else noTestName">Test name (result from input bindings): {{ testName }}</p>
 <ng-template #noTestName>
   <p>Right now "testName" property is empty. This is ngIf else template. Type in input field to see this change</p>
@@ -33,3 +37,7 @@
 <app-test></app-test>
 <app-test></app-test>
 <app-test></app-test>
+
+<hr />
+
+<app-test-keys></app-test-keys>
